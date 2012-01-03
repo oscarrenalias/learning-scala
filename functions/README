@@ -1,1 +1,28 @@
-Some very simple examples of how to create functions, and how to combine them
+Some very simple examples of how to create functions, and how to combine them.
+
+FunctionExample.scala
+---------------------
+Basic example that shows how functions can be created in Scala: either using def, as  function literal (with val) or as an object/class that extends the FunctionX type.
+
+How to run:
+
+scalac FunctionExample.scala
+scala FunctionExample
+
+CombinableFunctions.scala
+-------------------------
+Additional example that shows how functions can be combined with each other to create more powerful functions.
+
+How to run:
+
+scalac CombinableFunctions.scala
+scala CombinableFunctions
+
+PartialFunctions.scala
+----------------------
+Builds on the previous examples to create a new example of partial functions (functions that are only defined for a subset of a domain), and how different partial functions can be combined into a larger function that is used to respond to HTTP requests.
+
+How to run:
+
+scalac PartialFunctions.scala
+scala PartialFunctions

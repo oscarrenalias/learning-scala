@@ -1,0 +1,8 @@
+OptionExample1.scala
+--------------------
+Some basic handling of the Option type:
+
+How to run:
+
+scalac OptionExample1.scala
+scala OptionExample1

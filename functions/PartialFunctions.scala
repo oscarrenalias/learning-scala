@@ -1,8 +1,18 @@
+/**
+ * An example of combinable partial functions that implements a very simple HTTP request handler.
+ *
+ * Each one of the different "routes"/URLs of the server is implemented in a handler as a partial function that
+ * processes it.
+ *
+ * The advantage is that instead of one large if-else chain, we've got one function per handler that can be combined
+ * in multiple ways to handle the routes
+ */
 object PartialFunctions {
-	// this will save us some keystrokes
+	// Route could be defined as a real class but here we use a type alias
 	type Route = PartialFunction[HttpRequest, HttpResponse]	
 
-	// case classes provide extractors for pattern matching automatically
+	// case classes provide extractors for pattern matching automatically, will be used later below to
+	// deconstruct input parameters and extract the information that we need from the request
 	case class HttpRequest(path:String, params:Map[String,String] = Map())
 	case class HttpResponse(responseCode:Int, contentType:String, body:String)	
 	

@@ -1,3 +1,10 @@
+/**
+ * This example shows how to create functions in Scala, using 3 different approaches:
+ *
+ * Method (using def)
+ * Extending the FunctionX type (Function1 in this case)
+ * As a function literal (using val)
+ */
 object FunctionExample {
 
 	// function defined as a class method

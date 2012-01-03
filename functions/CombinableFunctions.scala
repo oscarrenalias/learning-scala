@@ -1,3 +1,7 @@
+/**
+ * Attempt of a practical example to show how to combine functions with andThen to create a 
+ * chain pattern where the same input is optionally processed by different functions.
+ */
 object CombinableFunctions {
 
 	// This case class will be used as a parameter object to pass around our chain of functions, 
@@ -5,7 +9,8 @@ object CombinableFunctions {
 	// state
 	case class FunctionParameter(file:String, lang:String = "EN", var result:Option[String] = None)
 
-	// Having this in a trait that is extended by our function classes saves us some typing
+	// Main trait that our chanined functions extend. We could repeat Function1[...] all over the place
+	// but it's more neat if we have it as our own type
 	trait ChainedFunction extends Function1[FunctionParameter,FunctionParameter]
 	
 	// Converts the image to a format suitable for OCR
